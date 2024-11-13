@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.26)
+project(test)
+set(CMAKE_CXX_STANDARD 11)
+set(EXECUTABLE_OUTPUT_PATH ${EXEC_PATH})
+file(GLOB SRC_LIST ./*.cpp)
+include_directories(${HEAD_PATH})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+add_executable(test_skiplist ${SRC_LIST})
